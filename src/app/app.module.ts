@@ -15,6 +15,8 @@ import { ParenteralNutritionComponent } from './parenteral-nutrition/parenteral-
 import { EnteralNutritionComponent } from './enteral-nutrition/enteral-nutrition.component';
 import { OtherNutritionComponent } from './other-nutrition/other-nutrition.component';
 import { AdditivesComponent } from './additives/additives.component';
+import { SubjectsComponent } from './subjects/subjects.component';
+import { SubjectsService } from './subjects/subjects.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { AdditivesComponent } from './additives/additives.component';
     ParenteralNutritionComponent,
     EnteralNutritionComponent,
     OtherNutritionComponent,
-    AdditivesComponent
+    AdditivesComponent,
+    SubjectsComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import { AdditivesComponent } from './additives/additives.component';
     AlertModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [SubjectsService],
   bootstrap: [AppComponent]
 })
 
