@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
-
+import { TabsModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 import { AppComponent } from './app.component';
@@ -33,6 +33,7 @@ import { SubjectsService } from './subjects/subjects.service';
     BrowserModule,
     FormsModule,
     HttpModule,
+    TabsModule,
     AlertModule,
     AppRoutingModule
   ],

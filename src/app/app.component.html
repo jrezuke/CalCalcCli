@@ -1,27 +1,35 @@
-
 <header class="container-fluid">
-    <nav class="navbar navbar-default">
-      <div class="pull-left">
-        <i class="fa fa-balance-scale fa-4x" style="color:#32639A" aria-hidden="true"></i>
-       <span>Calorie Calculator</span>
-      </div>
-    </nav>
+  <nav class="navbar navbar-default">
+    <div class="pull-left">
+      <i class="fa fa-balance-scale fa-4x" style="color:#32639A" aria-hidden="true"></i>
+      <span>Calorie Calculator</span>
+    </div>
+    <div class="clearRight clearLeft">
+      <nav class="pull-left">
+        <ul class="nav nav-pills">
+          <li role="presentation"><a routerLink='home'>Home</a></li>
+          <li role="presentation"><a routerLink='about'>About</a></li>
+          <li role="presentation"><a routerLink='contact'>Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </nav>
 </header>
 <!--<div *ngIf="_accountService.showSpinner" class="divSpinner">
     <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
     <span class="sr-only">Loading...</span>
 </div>-->
-<div  class="container-fluid">
-    <div class="row">
-        <!--<aside [@sideBarVisibility]="state"  class="col-sm-2">-->
-        <aside class="col-sm-2">
-            <div>
+<div class="container-fluid">
+  <div class="row">
+    <!--<aside [@sideBarVisibility]="state"  class="col-sm-2">-->
+    <aside class="col-sm-2">
+      <div>
 
-                <!--<a [routerLink]="['/register/']"><i class="fa fa-user-plus fa-4x" aria-hidden="true"></i><h3>Register New User</h3></a>-->
-                <a [routerLink]="['/home/']"><i class="fa fa-user-plus fa-4x" aria-hidden="true"></i><h3>Register New User</h3></a>
+        <!--<a [routerLink]="['/register/']"><i class="fa fa-user-plus fa-4x" aria-hidden="true"></i><h3>Register New User</h3></a>-->
+        <a [routerLink]="['/home/']"><i class="fa fa-user-plus fa-3x" aria-hidden="true"></i><h4>Add New Entry</h4></a>
 
-            </div>
-            <div>
+      </div>
+      <!--<div>
                 <a ><i class="fa fa-key fa-4x" aria-hidden="true"></i><h3>Reset Password</h3></a>
 
             </div>
@@ -35,12 +43,12 @@
             </div>
             <div>
                 <a ><i class="fa fa-search fa-4x" aria-hidden="true"></i><h3>Search</h3></a>
-            </div>
+            </div>-->
 
-        </aside>
+    </aside>
 
-        <section class="col-sm-10">
-            <router-outlet></router-outlet>
-        </section>
-    </div>
+    <section class="col-sm-10">
+      <router-outlet></router-outlet>
+    </section>
+  </div>
 </div>
