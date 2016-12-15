@@ -9,17 +9,15 @@ import { TabsModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 import { AppComponent } from './app.component';
-import { SubjectsComponent } from './subjects/subjects.component';
 import { SubjectsService } from './subjects/subjects.service';
 import { AboutComponent } from './about/about.component';
 import { SettingsComponent } from './settings/settings.component';
 import { HomeComponent } from './home/home.component';
-//import { CalcEntryModule } from './calc-entry/calc-entry.module'; this is being lazy loaded
+import { CalculateService } from './shared/calculate.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SubjectsComponent,
     AboutComponent,
     SettingsComponent,
     HomeComponent
@@ -33,7 +31,7 @@ import { HomeComponent } from './home/home.component';
     AlertModule,
     AppRoutingModule
   ],
-  providers: [SubjectsService],
+  providers: [SubjectsService, CalculateService],
   bootstrap: [AppComponent]
 })
 

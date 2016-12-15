@@ -10,7 +10,7 @@ const routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'settings', component: SettingsComponent },
-  { path: 'subjects', component: SubjectsComponent },
+  { path: 'subjects', loadChildren: 'app/subjects/subjects.module#SubjectsModule' },
   { path: 'entry', loadChildren: 'app/calc-entry/calc-entry.module#CalcEntryModule' },
 
 ];

@@ -14,20 +14,20 @@ export class SubjectsService {
   constructor(private _http: Http) { }
 
   getSubjects() {
-    this.apiUrl = "http://localhost:12304/api/sites";
+    this.apiUrl = "http://localhost:12304/api/subjects";
     return this._http.get(this.apiUrl)
       .map(res => res.json())
       .catch(this.handleError);
   }
 
   handleError(err: any) {
-        console.log('sever error:', err);  // debug
-        if(err instanceof Response) {
-          //return Observable.throw(err.json().error || 'backend server error');
-          // if you're using lite-server, use the following line
-          // instead of the line above:
-          return Observable.throw(err.text() || 'backend server error');
-        }
-        return Observable.throw(err || 'backend server error');
+    console.log('sever error:', err);  // debug
+    if (err instanceof Response) {
+      //return Observable.throw(err.json().error || 'backend server error');
+      // if you're using lite-server, use the following line
+      // instead of the line above:
+      return Observable.throw(err.text() || 'backend server error');
     }
+    return Observable.throw(err || 'backend server error');
+  }
 }

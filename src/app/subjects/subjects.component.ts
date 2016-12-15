@@ -8,10 +8,10 @@ import { SubjectsService } from './subjects.service';
 })
 export class SubjectsComponent implements OnInit {
 
-  constructor(private _subjectsService: SubjectsService) { }
+  constructor() { }
 
   ngOnInit() {
-    this._subjectsService.getSubjects().subscribe(subjects => console.log("SubjectsComponent.ngOnInit getSubjects", subjects));
+    //this._subjectsService.getSubjects().subscribe(subjects => console.log("SubjectsComponent.ngOnInit getSubjects", subjects));
   }
 
 
