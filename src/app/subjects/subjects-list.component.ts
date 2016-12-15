@@ -4,11 +4,11 @@ import { Subject } from './subject';
 
 @Component({
   selector: "subject-list",
-  template: `<div>
-  <h2>subjects list is working!</h2>
-  <router-outlet></router-outlet>
-</div>`
-  //templateUrl: "app/subject/subjects-list.component.html"
+//   template: `<div>
+//   <h2>subjects list is working!</h2>
+//   <router-outlet></router-outlet>
+// </div>`
+  templateUrl: "./subjects-list.component.html"
 })
 
 export class SubjectsListComponent implements OnInit {
