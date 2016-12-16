@@ -47,6 +47,7 @@ import { Router, NavigationStart, NavigationEnd, NavigationExtras, ActivatedRout
 export class AppComponent {
   title = 'app works!';
   hideMainSideMenu: boolean = false;
+  hideEntrySideMenu: boolean = true;
   state: string = 'show';
   state2: string = 'hide';
 
@@ -73,15 +74,28 @@ export class AppComponent {
 
   onPathChange(url: string) {
     console.log("onPathChange path:", url);
-    if (url.startsWith("/entry")) {
-      this.hideMainSideMenu = true;
-      this.state = "hide";
-      this.state2 = "show";
-    }
-    else {
+    if(url.startsWith("/home"))
+    {
       this.hideMainSideMenu = false;
+      this.hideEntrySideMenu = true;
       this.state = "show";
       this.state2 = "hide";
     }
+    else{
+      if (url.startsWith("/entry")) {
+        this.hideMainSideMenu = true;
+        this.hideEntrySideMenu = false;
+        this.state = "hide";
+        this.state2 = "show";
+      }
+      else{
+        this.hideMainSideMenu = true;
+        this.hideEntrySideMenu = true;
+        this.state = "hide";
+        this.state2 = "hide";
+      }
+    }
+
+
   }
 }

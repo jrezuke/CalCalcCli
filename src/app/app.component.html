@@ -2,18 +2,18 @@
   <nav class="navbar navbar-default">
     <div class="pull-left">
       <i class="fa fa-balance-scale fa-4x" style="color:#32639A" aria-hidden="true"></i>
-      <span>Calorie Calculator</span>
-    </div>
-    <div class="clearRight clearLeft">
-      <nav class="pull-left">
-        <ul class="nav nav-pills">
-          <li role="presentation"><a routerLink='home'>Home</a></li>
-          <li role="presentation"><a routerLink='about'>About</a></li>
-          <li role="presentation"><a routerLink='settings'>Settings</a></li>
-        </ul>
-      </nav>
-    </div>
+<span>Calorie Calculator</span>
+</div>
+<div class="clearRight clearLeft">
+  <nav class="pull-left">
+    <ul class="nav nav-pills">
+      <li role="presentation"><a routerLink='home'>Home</a></li>
+      <li role="presentation"><a routerLink='about'>About</a></li>
+      <li role="presentation"><a routerLink='settings'>Settings</a></li>
+    </ul>
   </nav>
+</div>
+</nav>
 </header>
 <!--<div *ngIf="_accountService.showSpinner" class="divSpinner">
     <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
@@ -22,7 +22,7 @@
 <div class="container-fluid">
   <div class="row">
     <!--<aside [@sideBarVisibility]="state"  class="col-sm-2">-->
-    <aside [@sideBarVisibility]="state" *ngIf="!hideMainSideMenu" class="col-sm-2">
+    <aside [@sideBarVisibility]="state" *ngIf="! hideMainSideMenu" class="col-sm-2">
       <div>
         <a [routerLink]="['/entry']"><i class="fa fa-user-plus fa-3x" aria-hidden="true"></i><h4>Add New Entry</h4></a>
       </div>
@@ -34,37 +34,37 @@
       </div>
     </aside>
     <!--<aside [@sideBarVisibility2]="state2"  class="col-sm-2">-->
-    <aside [@sideBarVisibility2]="state2" *ngIf="hideMainSideMenu" class="col-sm-2">
+    <aside [@sideBarVisibility2]="state2" *ngIf="! hideEntrySideMenu" class="col-sm-2">
 
       <div>
         <a [routerLink]="['/entry/fluidinfusions']"><img src="assets/fluidinfusions.ico" alt="some_text" style="width:30px;height:30px;">
-          <h4>Fluid Infusions</h4>
-        </a>
-      </div>
-      <div>
-        <a [routerLink]="['/entry/parenteralnutrition']"><img src="assets/parenteral.ico" alt="some_text" style="width:30px;height:30px;">
-          <h4>Parenteral Nutrition</h4>
-        </a>
-      </div>
-      <div>
-        <a [routerLink]="['/entry/enteralnutrition']"><img src="assets/enteral.ico" alt="some_text" style="width:30px;height:30px;">
-          <h4>Enteral Nutrition</h4>
-        </a>
+<h4>Fluid Infusions</h4>
+</a>
+</div>
+<div>
+  <a [routerLink]="['/entry/parenteralnutrition']"><img src="assets/parenteral.ico" alt="some_text" style="width:30px;height:30px;">
+<h4>Parenteral Nutrition</h4>
+</a>
+</div>
+<div>
+  <a [routerLink]="['/entry/enteralnutrition']"><img src="assets/enteral.ico" alt="some_text" style="width:30px;height:30px;">
+<h4>Enteral Nutrition</h4>
+</a>
 
-      </div>
-      <div>
-        <a [routerLink]="['/entry/additives']"><img src="assets/additives.ico" alt="some_text" style="width:30px;height:30px;">
-          <h4>Additives</h4>
-        </a>
-      </div>
-      <div>
-        <a [routerLink]="['/entry/othernutrition']"><i class="fa fa-user-plus fa-3x" aria-hidden="true"></i><h4>Other Nutrition</h4></a>
+</div>
+<div>
+  <a [routerLink]="['/entry/additives']"><img src="assets/additives.ico" alt="some_text" style="width:30px;height:30px;">
+<h4>Additives</h4>
+</a>
+</div>
+<div>
+  <a [routerLink]="['/entry/othernutrition']"><i class="fa fa-user-plus fa-3x" aria-hidden="true"></i><h4>Other Nutrition</h4></a>
 
-      </div>
-    </aside>
-    <section class="col-sm-10">
-      <router-outlet></router-outlet>
-    </section>
-    <router-outlet name="entryMenu"></router-outlet>
-  </div>
+</div>
+</aside>
+<section class="col-sm-10">
+  <router-outlet></router-outlet>
+</section>
+<router-outlet name="entryMenu"></router-outlet>
+</div>
 </div>
