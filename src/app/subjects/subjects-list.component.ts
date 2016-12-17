@@ -36,7 +36,7 @@ export class SubjectsListComponent implements OnInit {
   }
   onEdit(subject: Subject) {
     console.log("onEdit subject:", subject);
-    //this._router.navigate();
+    this._router.navigate(['/subjects', subject.id]);
 
   }
 }

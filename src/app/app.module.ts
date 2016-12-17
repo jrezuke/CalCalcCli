@@ -10,6 +10,7 @@ import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 import { AppComponent } from './app.component';
 import { SubjectsService } from './subjects/subjects.service';
+import { SitesService } from './sites/sites.service';
 import { AboutComponent } from './about/about.component';
 import { SettingsComponent } from './settings/settings.component';
 import { HomeComponent } from './home/home.component';
@@ -21,7 +22,6 @@ import { CalculateService } from './shared/calculate.service';
     AboutComponent,
     SettingsComponent,
     HomeComponent
-
   ],
   imports: [
     BrowserModule,
@@ -31,7 +31,8 @@ import { CalculateService } from './shared/calculate.service';
     AlertModule,
     AppRoutingModule
   ],
-  providers: [SubjectsService, CalculateService],
+  providers: [SubjectsService,
+    SitesService, CalculateService],
   bootstrap: [AppComponent]
 })
 

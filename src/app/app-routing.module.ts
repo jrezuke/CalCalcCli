@@ -7,10 +7,12 @@ import { SettingsComponent } from './settings/settings.component';
 import { SubjectsComponent } from './subjects/subjects.component';
 
 const routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'subjects', loadChildren: 'app/subjects/subjects.module#SubjectsModule' },
+  { path: 'sites', loadChildren: 'app/sites/sites.module#SitesModule' },
   { path: 'entry', loadChildren: 'app/calc-entry/calc-entry.module#CalcEntryModule' },
 
 ];

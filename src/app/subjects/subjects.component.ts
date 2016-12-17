@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SubjectsService } from './subjects.service';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-subjects',
@@ -11,8 +12,5 @@ export class SubjectsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    //this._subjectsService.getSubjects().subscribe(subjects => console.log("SubjectsComponent.ngOnInit getSubjects", subjects));
   }
-
-
 }

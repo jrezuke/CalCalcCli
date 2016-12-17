@@ -4,17 +4,17 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
-import { Subject } from './subject';
+import { Site } from './site';
 
 @Injectable()
-export class SubjectsService {
+export class SitesService {
   apiUrl: string;
-  subjects: Observable<Subject>[];
+  subjects: Observable<Site>[];
 
   constructor(private _http: Http) { }
 
-  getSubjects() {
-    this.apiUrl = "http://localhost:12304/api/subjects";
+  getSites() {
+    this.apiUrl = "http://localhost:12304/api/sites";
     return this._http.get(this.apiUrl)
       .map(res => res.json())
       .catch(this.handleError);
