@@ -9,11 +9,11 @@ import { FormGroup, Validators } from '@angular/forms';
 export class SubjectEditComponent implements OnInit {
   id: string;
 
-  constructor(private _route: ActivatedRoute,
+  constructor(private _activatedRoute: ActivatedRoute,
     private _router: Router) { }
 
   ngOnInit() {
-    this._route.params.subscribe(params => {
+    this._activatedRoute.params.subscribe(params => {
       this.id = params['id']; // (+) converts string 'id' to a number
       console.log("params id:", this.id);
     });

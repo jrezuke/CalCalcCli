@@ -5,16 +5,20 @@ import { SitesComponent } from './sites.component';
 import { SitesListComponent } from './sites-list.component';
 import { SitesNewComponent } from './sites-new.component';
 import { SitesEditComponent } from './sites-edit.component';
-
+import { SiteResolver } from './site.resolver';
 
 const sitesRoutes: Routes = [
   {
     path: '', component: SitesComponent,
     children: [
       { path: '', component: SitesListComponent },
-      { path: 'new', component: SitesNewComponent },
-      { path: ':id', component: SitesEditComponent }
+      { path: 'new', component: SitesNewComponent }
+
     ]
+  },
+  {
+    path: ':id', component: SitesEditComponent,
+    resolve: { siteEdit: SiteResolver }
   }
 
 ];

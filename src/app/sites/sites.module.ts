@@ -7,11 +7,13 @@ import { SitesComponent } from './sites.component';
 import { SitesListComponent } from './sites-list.component';
 import { SitesNewComponent } from './sites-new.component';
 import { SitesEditComponent } from './sites-edit.component';
+import { SiteResolver } from './site.resolver';
 
 @NgModule({
   imports: [SitesRoutingModule,
     CommonModule, FormsModule
   ],
+  providers: [SiteResolver],
   declarations: [SitesComponent,
     SitesNewComponent,
     SitesListComponent,

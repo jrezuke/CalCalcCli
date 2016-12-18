@@ -33,6 +33,7 @@ export class SubjectsListComponent implements OnInit {
 
   onNew() {
     console.log("onNew");
+    this._router.navigate(['/subjects/new']);
   }
   onEdit(subject: Subject) {
     console.log("onEdit subject:", subject);

@@ -7,12 +7,13 @@ import { SubjectsListComponent } from './subjects-list.component';
 import { SubjectsRoutingModule } from './subjects-routing.module';
 import { SubjectsService } from './subjects.service';
 import { SubjectEditComponent } from './subject-edit.component';
+import { SubjectsNewComponent } from './subjects-new.component';
 
 @NgModule({
   imports: [SubjectsRoutingModule, CommonModule, FormsModule],
   declarations: [SubjectsComponent,
     SubjectsListComponent,
-    SubjectEditComponent],
+    SubjectEditComponent, SubjectsNewComponent],
   providers: [SubjectsService]
 })
 
